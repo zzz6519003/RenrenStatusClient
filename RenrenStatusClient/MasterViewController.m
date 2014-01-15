@@ -61,7 +61,7 @@
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *a = [_objects mutableCopy];
         [a  addObjectsFromArray:responseObject[@"response"]];
         _objects = a;
