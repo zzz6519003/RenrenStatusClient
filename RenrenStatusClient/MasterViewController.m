@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -134,6 +134,16 @@
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+- (IBAction)composeStatus:(id)sender {
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil) return;
+    NSDate *fireTime = [[NSDate date] addTimeInterval:10]; // adds 10 secs
+    localNotif.fireDate = fireTime;
+    localNotif.alertBody = @"Alert!";
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+
 }
 
 @end

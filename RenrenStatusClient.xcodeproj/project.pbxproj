@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1836F50418897FFB00B1E077 /* PostStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836F50318897FFB00B1E077 /* PostStatusViewController.m */; };
 		188EE074187E33C7009CFEF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE073187E33C7009CFEF1 /* Foundation.framework */; };
 		188EE076187E33C7009CFEF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE075187E33C7009CFEF1 /* CoreGraphics.framework */; };
 		188EE078187E33C7009CFEF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE077187E33C7009CFEF1 /* UIKit.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1836F50218897FFB00B1E077 /* PostStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostStatusViewController.h; sourceTree = "<group>"; };
+		1836F50318897FFB00B1E077 /* PostStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostStatusViewController.m; sourceTree = "<group>"; };
 		188EE070187E33C7009CFEF1 /* RenrenStatusClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenrenStatusClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188EE073187E33C7009CFEF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		188EE075187E33C7009CFEF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				188EE085187E33C7009CFEF1 /* Main.storyboard */,
 				188EE088187E33C7009CFEF1 /* MasterViewController.h */,
 				188EE089187E33C7009CFEF1 /* MasterViewController.m */,
+				1836F50218897FFB00B1E077 /* PostStatusViewController.h */,
+				1836F50318897FFB00B1E077 /* PostStatusViewController.m */,
 				188EE08B187E33C7009CFEF1 /* DetailViewController.h */,
 				188EE08C187E33C7009CFEF1 /* DetailViewController.m */,
 				188EE08E187E33C7009CFEF1 /* Images.xcassets */,
@@ -261,6 +266,11 @@
 				TargetAttributes = {
 					188EE06F187E33C7009CFEF1 = {
 						DevelopmentTeam = YU645886QH;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					188EE093187E33C7009CFEF1 = {
 						TestTargetID = 188EE06F187E33C7009CFEF1;
@@ -324,6 +334,7 @@
 				188EE0DF187EAC3D009CFEF1 /* AFNetworkReachabilityManager.m in Sources */,
 				188EE0E3187EAC3D009CFEF1 /* AFURLResponseSerialization.m in Sources */,
 				188EE0E4187EAC3D009CFEF1 /* AFURLSessionManager.m in Sources */,
+				1836F50418897FFB00B1E077 /* PostStatusViewController.m in Sources */,
 				188EE08D187E33C7009CFEF1 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
