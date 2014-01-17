@@ -136,14 +136,4 @@
     }
 }
 
-- (IBAction)composeStatus:(id)sender {
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil) return;
-    NSDate *fireTime = [[NSDate date] addTimeInterval:10]; // adds 10 secs
-    localNotif.fireDate = fireTime;
-    localNotif.alertBody = @"Alert!";
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-
-}
-
 @end

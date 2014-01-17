@@ -50,4 +50,8 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
 
 }
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 @end
