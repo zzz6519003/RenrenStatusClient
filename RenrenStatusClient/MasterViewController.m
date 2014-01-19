@@ -93,7 +93,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = _objects[indexPath.row][@"resource"][@"content"];
+    cell.detailTextLabel.text = _objects[indexPath.row][@"resource"][@"content"];
+    cell.textLabel.text = _objects[indexPath.row][@"sourceUser"][@"name"];
     return cell;
 }
 
