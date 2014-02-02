@@ -45,6 +45,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +85,28 @@
         NSLog(@"Error: %@", error);
     }];
 
+}
 
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGRect keyboardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    float height = keyboardFrame.size.height;
+
+    //Assign new frame to your view
+    self.view.transform = CGAffineTransformMakeTranslation(0, -height);
+
+//    [self.view setFrame:CGRectMake(0, -height + 20, 320, 460)]; //here taken -20 for example i.e. your view will be scrolled to -20. change its value according to your requirement.
+    
+}
+
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+//    [self.view setFrame:CGRectMake(0,0,320,460)];
+    self.view.transform = CGAffineTransformIdentity;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 @end
