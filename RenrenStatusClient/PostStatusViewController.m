@@ -41,7 +41,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#import "Constants.h"
 - (IBAction)done:(id)sender {
+    
+    NSString *status = self.statusLabel.text;
+    [[NSUserDefaults standardUserDefaults] setObject:status forKey:USER_STATUS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
     UILocalNotification *localNotif = [[UILocalNotification alloc] init];
     if (localNotif == nil) NSLog(@"notif creation failed!");
     NSDate *fireTime = [[NSDate date] addTimeInterval:((UISlider *)sender).value * 24 * 60 * 60]; // adds 10 secs

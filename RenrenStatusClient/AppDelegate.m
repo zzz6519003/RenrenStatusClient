@@ -45,11 +45,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#import "Constants.h"
 - (void)application:(UIApplication *)application
 didReceiveLocalNotification:(UILocalNotification *)notification
 {
+    NSString *str = [NSString stringWithFormat:@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:USER_STATUS_KEY]];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"MyAlertView"
-                                                        message:@"Local notification was received"
+                                                        message:str
                                                        delegate:self cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
     [alertView show];

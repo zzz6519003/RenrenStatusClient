@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1808002718A455D600FD15B3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1836F50218897FFB00B1E077 /* PostStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostStatusViewController.h; sourceTree = "<group>"; };
 		1836F50318897FFB00B1E077 /* PostStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostStatusViewController.m; sourceTree = "<group>"; };
 		188EE070187E33C7009CFEF1 /* RenrenStatusClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenrenStatusClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1821A0DB18A3072E00F380A0 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				188EE0C8187EAC3D009CFEF1 /* AFNetworking */,
+			);
+			name = Vendor;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		188EE067187E33C7009CFEF1 = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +156,7 @@
 		188EE079187E33C7009CFEF1 /* RenrenStatusClient */ = {
 			isa = PBXGroup;
 			children = (
-				188EE0C8187EAC3D009CFEF1 /* AFNetworking */,
+				1821A0DB18A3072E00F380A0 /* Vendor */,
 				188EE082187E33C7009CFEF1 /* AppDelegate.h */,
 				188EE083187E33C7009CFEF1 /* AppDelegate.m */,
 				188EE085187E33C7009CFEF1 /* Main.storyboard */,
@@ -156,6 +166,7 @@
 				1836F50318897FFB00B1E077 /* PostStatusViewController.m */,
 				188EE08B187E33C7009CFEF1 /* DetailViewController.h */,
 				188EE08C187E33C7009CFEF1 /* DetailViewController.m */,
+				1808002718A455D600FD15B3 /* Constants.h */,
 				188EE08E187E33C7009CFEF1 /* Images.xcassets */,
 				188EE07A187E33C7009CFEF1 /* Supporting Files */,
 			);
@@ -214,7 +225,8 @@
 				188EE0DA187EAC3D009CFEF1 /* AFURLSessionManager.h */,
 				188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = RenrenStatusClient/AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
