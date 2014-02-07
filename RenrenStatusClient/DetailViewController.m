@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "AFNetworking.h"
+#import "TSMessage.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *replyContent;
@@ -71,6 +72,7 @@
 }
 
 - (IBAction)review:(id)sender {
+    [self.view endEditing:YES];
 //    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=195797|6.8492fbb89ad82a9a9c8f12f16e482e7d.2592000.1391914800-279838227"];
 //    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
