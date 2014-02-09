@@ -82,8 +82,10 @@
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [TSMessage showNotificationWithTitle:@"Success!" type:TSMessageNotificationTypeSuccess];
         NSLog(@"JSON: %@", responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [TSMessage showNotificationWithTitle:@"Fail" type:TSMessageNotificationTypeError];
         NSLog(@"Error: %@", error);
     }];
 
