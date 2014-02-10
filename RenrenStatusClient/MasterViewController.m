@@ -8,9 +8,8 @@
 
 #import "MasterViewController.h"
 #import "AFNetworking.h"
-
+#import "Constants.h"
 #import "DetailViewController.h"
-#define TOKEN 195797|6.585eb6afde0bf8b14dbe04d7211d6db5.2592000.1391911200-279838227
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -27,7 +26,7 @@
 
 - (void)refresh {
     pageNumber = 1;
-    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=195797|6.8492fbb89ad82a9a9c8f12f16e482e7d.2592000.1391914800-279838227&feedType=UPDATE_STATUS&pageSize=100&pageNumber=%d", pageNumber];
+    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=%@&feedType=UPDATE_STATUS&pageSize=100&pageNumber=%d",TOKEN, pageNumber];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -55,7 +54,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=195797|6.8492fbb89ad82a9a9c8f12f16e482e7d.2592000.1391914800-279838227&feedType=UPDATE_STATUS&pageSize=100"];
+    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=%@&feedType=UPDATE_STATUS&pageSize=100", TOKEN];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -78,7 +77,7 @@
 - (void)insertNewObject:(id)sender
 {
     pageNumber++;
-    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=195797|6.8492fbb89ad82a9a9c8f12f16e482e7d.2592000.1391914800-279838227&feedType=UPDATE_STATUS&pageSize=100&pageNumber=%d", pageNumber];
+    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=%@&feedType=UPDATE_STATUS&pageSize=100&pageNumber=%d", TOKEN, pageNumber];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
