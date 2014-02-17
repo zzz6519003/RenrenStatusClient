@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITextField *statusLabel;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *bb1;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *bb2;
 @end
 
 @implementation PostStatusViewController
@@ -33,6 +35,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.rightBarButtonItems = @[self.bb1, self.bb2];
 }
 
 - (void)didReceiveMemoryWarning
