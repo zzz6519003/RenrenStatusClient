@@ -7,6 +7,7 @@
 //
 
 #import "PostStatusViewController.h"
+#import "StatusListViewController.h"
 
 @interface PostStatusViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -36,6 +37,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationItem.rightBarButtonItems = @[self.bb1, self.bb2];
+    self.bb2.target = self;
+    self.bb2.action = @selector(showStatusList);
+}
+
+- (void)showStatusList {
+    // 教你透彻了解红黑树
+    StatusListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"StatusList"];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning

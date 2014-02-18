@@ -33,6 +33,7 @@
 		1836F5D318A4492B0022A83D /* HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836F5D018A4492B0022A83D /* HexColor.m */; };
 		1836F5D418A4492B0022A83D /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = 1836F5D118A4492B0022A83D /* LICENCE */; };
 		1836F5D518A4492B0022A83D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1836F5D218A4492B0022A83D /* README.md */; };
+		1837850D18B35A6B0015F2C5 /* StatusListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837850C18B35A6B0015F2C5 /* StatusListViewController.m */; };
 		188EE074187E33C7009CFEF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE073187E33C7009CFEF1 /* Foundation.framework */; };
 		188EE076187E33C7009CFEF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE075187E33C7009CFEF1 /* CoreGraphics.framework */; };
 		188EE078187E33C7009CFEF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188EE077187E33C7009CFEF1 /* UIKit.framework */; };
@@ -102,6 +103,8 @@
 		1836F5D018A4492B0022A83D /* HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColor.m; sourceTree = "<group>"; };
 		1836F5D118A4492B0022A83D /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		1836F5D218A4492B0022A83D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1837850B18B35A6B0015F2C5 /* StatusListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusListViewController.h; sourceTree = "<group>"; };
+		1837850C18B35A6B0015F2C5 /* StatusListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusListViewController.m; sourceTree = "<group>"; };
 		188EE070187E33C7009CFEF1 /* RenrenStatusClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RenrenStatusClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188EE073187E33C7009CFEF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		188EE075187E33C7009CFEF1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -311,6 +314,8 @@
 				188EE089187E33C7009CFEF1 /* MasterViewController.m */,
 				1836F50218897FFB00B1E077 /* PostStatusViewController.h */,
 				1836F50318897FFB00B1E077 /* PostStatusViewController.m */,
+				1837850B18B35A6B0015F2C5 /* StatusListViewController.h */,
+				1837850C18B35A6B0015F2C5 /* StatusListViewController.m */,
 				188EE08B187E33C7009CFEF1 /* DetailViewController.h */,
 				188EE08C187E33C7009CFEF1 /* DetailViewController.m */,
 				1808002718A455D600FD15B3 /* Constants.h */,
@@ -503,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1836F5B918A448DA0022A83D /* TSMessage.m in Sources */,
+				1837850D18B35A6B0015F2C5 /* StatusListViewController.m in Sources */,
 				188EE084187E33C7009CFEF1 /* AppDelegate.m in Sources */,
 				188EE0E0187EAC3D009CFEF1 /* AFSecurityPolicy.m in Sources */,
 				188EE08A187E33C7009CFEF1 /* MasterViewController.m in Sources */,
