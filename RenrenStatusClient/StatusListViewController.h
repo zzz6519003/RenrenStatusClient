@@ -10,4 +10,6 @@
 
 @interface StatusListViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *imageArray;
+
 @end
