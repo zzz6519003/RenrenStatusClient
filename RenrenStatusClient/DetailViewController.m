@@ -74,8 +74,6 @@
 
 - (IBAction)review:(id)sender {
     [self.view endEditing:YES];
-//    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=195797|6.8492fbb89ad82a9a9c8f12f16e482e7d.2592000.1391914800-279838227"];
-//    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSDictionary *parameters = @{@"content": self.replyContent.text, @"commentType": @"STATUS", @"entryOwnerId" : _detailItem[@"sourceUser"][@"id"], @"entryId": _detailItem[@"resource"][@"id"]};
