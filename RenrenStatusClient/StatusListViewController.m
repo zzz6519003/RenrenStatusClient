@@ -7,6 +7,7 @@
 //
 
 #import "StatusListViewController.h"
+#import "Constants.h"
 
 @interface StatusListViewController ()
 
@@ -36,6 +37,8 @@
 }
 
 - (IBAction)goBack:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:self.statusArray forKey:STATUS_ARRAY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

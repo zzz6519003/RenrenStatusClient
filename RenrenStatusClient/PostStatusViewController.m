@@ -60,6 +60,10 @@
 - (IBAction)done:(id)sender {
     
     NSString *status = self.statusLabel.text;
+    
+    NSMutableArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:STATUS_ARRAY];
+    [array addObject:status];
+    
     [[NSUserDefaults standardUserDefaults] setObject:status forKey:USER_STATUS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
@@ -70,6 +74,7 @@
     localNotif.fireDate = fireTime;
     localNotif.alertBody = self.statusLabel.text;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 
