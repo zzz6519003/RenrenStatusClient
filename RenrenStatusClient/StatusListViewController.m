@@ -28,6 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:STATUS_ARRAY];
+    self.statusArray = arr;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +45,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatusCell"];
+    if (!cell) {
+        NSLog(@"wo cao!");
+    }
+    cell.textLabel.text = self.statusArray[indexPath.row];
+    return cell;
+}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    id a = @[@"1"];
+    return self.statusArray.count;
+}
 
 
 @end

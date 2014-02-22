@@ -6,15 +6,21 @@
 //  Copyright (c) 2014年 zzz. All rights reserved.
 //
 
+#import "Constants.h"
 #import "PostStatusViewController.h"
 #import "StatusListViewController.h"
 
 @interface PostStatusViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UITextField *statusLabel;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *bb1;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *bb2;
+@property (weak, nonatomic) IBOutlet UISlider *timeSlider;
+
+
+
 @end
 
 @implementation PostStatusViewController
@@ -39,6 +45,9 @@
     self.navigationItem.rightBarButtonItems = @[self.bb1, self.bb2];
     self.bb2.target = self;
     self.bb2.action = @selector(showStatusList);
+    
+    self.bb1.target = self;
+    self.bb1.action = @selector(done:);
 }
 
 - (void)showStatusList {
@@ -55,22 +64,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#import "Constants.h"
 - (IBAction)done:(id)sender {
     
     NSString *status = self.statusLabel.text;
     
     NSMutableArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:STATUS_ARRAY];
+    if (array == nil) {
+        array = [@[] mutableCopy];
+    }
     [array addObject:status];
     
+    [[NSUserDefaults standardUserDefaults] setObject:array forKey:STATUS_ARRAY];
     [[NSUserDefaults standardUserDefaults] setObject:status forKey:USER_STATUS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     
     UILocalNotification *localNotif = [[UILocalNotification alloc] init];
     if (localNotif == nil) NSLog(@"notif creation failed!");
-    NSDate *fireTime = [[NSDate date] addTimeInterval:((UISlider *)sender).value * 24 * 60 * 60]; // adds 10 secs
+    NSDate *fireTime = [[NSDate date] addTimeInterval:((UISlider *)self.timeSlider).value * 24 * 60 * 60]; // adds 10 secs
     localNotif.fireDate = fireTime;
     localNotif.alertBody = self.statusLabel.text;
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
