@@ -47,7 +47,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
 }
@@ -106,7 +106,7 @@
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.1 animations:^{
         self.view.transform = CGAffineTransformIdentity;
     }];
 }
