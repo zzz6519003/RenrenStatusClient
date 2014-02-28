@@ -81,10 +81,14 @@
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 
     [manager POST:url parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        [TSMessage showNotificationWithTitle:@"Success!" type:TSMessageNotificationTypeSuccess];
+//        [TSMessage showNotificationWithTitle:@"Success!" type:TSMessageNotificationTypeSuccess];
+        [TSMessage showNotificationInViewController:self.navigationController title:@"Success!" subtitle:nil type:TSMessageNotificationTypeSuccess];
+        self.replyContent.text = @"";
         NSLog(@"JSON: %@", responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [TSMessage showNotificationWithTitle:@"Fail" type:TSMessageNotificationTypeError];
+        [TSMessage showNotificationInViewController:self.navigationController title:@"Fail" subtitle:nil type:TSMessageNotificationTypeError];
+
         NSLog(@"Error: %@", error);
     }];
 
