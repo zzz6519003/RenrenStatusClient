@@ -154,7 +154,7 @@
                 <barButtonItem systemItem="done" id="TgV-HY-nhj"/>
                 <barButtonItem systemItem="bookmarks" id="tvK-DY-qsK"/>
             </objects>
-            <point key="canvasLocation" x="789" y="-352"/>
+            <point key="canvasLocation" x="930" y="-357"/>
         </scene>
         <!--Status List View Controller-->
         <scene sceneID="WT1-CD-ckM">
