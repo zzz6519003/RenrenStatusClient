@@ -72,6 +72,7 @@
     if (array == nil) {
         array = [@[] mutableCopy];
     }
+    array = [array mutableCopy];
     [array addObject:status];
     
     [[NSUserDefaults standardUserDefaults] setObject:array forKey:STATUS_ARRAY];

@@ -10,6 +10,6 @@
 
 @interface StatusListViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *statusArray;
+@property (nonatomic, strong) NSMutableArray *statusArray;
 
 @end

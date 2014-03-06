@@ -29,7 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:STATUS_ARRAY];
+    NSMutableArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:STATUS_ARRAY];
     self.statusArray = arr;
 }
 
