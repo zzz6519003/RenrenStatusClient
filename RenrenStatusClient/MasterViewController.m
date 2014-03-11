@@ -112,9 +112,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    btn.tag = indexPath.row;
+    [btn addTarget:self action:@selector(like:) forControlEvents:UIControlEventTouchUpInside];
+    [cell addSubview:btn];
     cell.detailTextLabel.text = _objects[indexPath.row][@"resource"][@"content"];
     cell.textLabel.text = _objects[indexPath.row][@"sourceUser"][@"name"];
     return cell;
+}
+
+- (void)like:(UIView *)sender {
+    NSInteger row = sender.tag;
+    NSString *Xid = _objects[row][@"id"];
+    NSString *sourceUserId = _objects[row][@"sourceUser"][@"id"];
+    NSDictionary *parameters = @{@"ugcOwnerId": sourceUserId, @"ugcId": Xid, @"LikeUGCType" : @"TYPE_STATUS"};
+
+    NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/like/ugc/put?access_token=%@", TOKEN];
+    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", responseObject);
+        _objects = responseObject[@"response"];
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
