@@ -39,6 +39,7 @@
 
     if (self.detailItem) {
         self.detailDescriptionLabel.text = self.detailItem[@"resource"][@"content"];
+        self.commentsArray = self.detailItem[@"comments"];
     }
 }
 
@@ -115,20 +116,35 @@
     }];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return self.detailDescriptionLabel;
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    return self.detailDescriptionLabel;
+//}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (![self.commentsArray isKindOfClass:[NSNull class]]) {
+    return [self.commentsArray count];
+    }
+    else {
+        return 0;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [UITableViewCell new];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"commentCell"];
+    cell.textLabel.text = self.commentsArray[indexPath.row][@"content"];
+    return cell;
 }
 
 @end
