@@ -142,8 +142,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"commentCell"];
-    cell.textLabel.text = self.commentsArray[indexPath.row][@"content"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"commentCell"];
+    cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
+    cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
     return cell;
 }
 
