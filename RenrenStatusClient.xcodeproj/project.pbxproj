@@ -58,6 +58,8 @@
 		188EE0E2187EAC3D009CFEF1 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D7187EAC3D009CFEF1 /* AFURLRequestSerialization.m */; };
 		188EE0E3187EAC3D009CFEF1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */; };
 		188EE0E4187EAC3D009CFEF1 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */; };
+		18F4E09818EB12E900FA30DA /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18F4E09618EB12E900FA30DA /* RennSDK.bundle */; };
+		18F4E09918EB12E900FA30DA /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F4E09718EB12E900FA30DA /* RennSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		188EE0DA187EAC3D009CFEF1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		18F4E09618EB12E900FA30DA /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
+		18F4E09718EB12E900FA30DA /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 			files = (
 				188EE076187E33C7009CFEF1 /* CoreGraphics.framework in Frameworks */,
 				188EE078187E33C7009CFEF1 /* UIKit.framework in Frameworks */,
+				18F4E09918EB12E900FA30DA /* RennSDK.framework in Frameworks */,
 				188EE074187E33C7009CFEF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +179,7 @@
 		1821A0DB18A3072E00F380A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				18F4E09518EB12D100FA30DA /* Renren */,
 				1836F59818A448DA0022A83D /* TSMessages */,
 				188EE0C8187EAC3D009CFEF1 /* AFNetworking */,
 			);
@@ -381,6 +387,15 @@
 			path = RenrenStatusClient/AFNetworking;
 			sourceTree = "<group>";
 		};
+		18F4E09518EB12D100FA30DA /* Renren */ = {
+			isa = PBXGroup;
+			children = (
+				18F4E09618EB12E900FA30DA /* RennSDK.bundle */,
+				18F4E09718EB12E900FA30DA /* RennSDK.framework */,
+			);
+			name = Renren;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -485,6 +500,7 @@
 				1836F5C618A448DA0022A83D /* NotificationBackgroundWarningIcon.png in Resources */,
 				1836F5C118A448DA0022A83D /* NotificationBackgroundSuccess@2x.png in Resources */,
 				1836F5BB18A448DA0022A83D /* NotificationBackgroundError@2x.png in Resources */,
+				18F4E09818EB12E900FA30DA /* RennSDK.bundle in Resources */,
 				1836F5BE18A448DA0022A83D /* NotificationBackgroundMessage.png in Resources */,
 				188EE087187E33C7009CFEF1 /* Main.storyboard in Resources */,
 				1836F5C718A448DA0022A83D /* NotificationBackgroundWarningIcon@2x.png in Resources */,
@@ -653,6 +669,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";
 				INFOPLIST_FILE = "RenrenStatusClient/RenrenStatusClient-Info.plist";
@@ -667,6 +687,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";
 				INFOPLIST_FILE = "RenrenStatusClient/RenrenStatusClient-Info.plist";

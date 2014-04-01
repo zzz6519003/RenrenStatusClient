@@ -145,6 +145,7 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"commentCell"];
     cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
     cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
+    cell.detailTextLabel.numberOfLines = 0;
     return cell;
 }
 

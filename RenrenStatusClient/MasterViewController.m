@@ -116,7 +116,8 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
     btn.tag = indexPath.row;
     [btn addTarget:self action:@selector(like:) forControlEvents:UIControlEventTouchUpInside];
-    [cell addSubview:btn];
+    //TODO
+//    [cell addSubview:btn];
     cell.detailTextLabel.text = _objects[indexPath.row][@"resource"][@"content"];
     cell.textLabel.text = _objects[indexPath.row][@"sourceUser"][@"name"];
     return cell;
