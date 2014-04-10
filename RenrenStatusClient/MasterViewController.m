@@ -10,8 +10,12 @@
 #import "AFNetworking.h"
 #import "Constants.h"
 #import "DetailViewController.h"
+//#import <RennSDK/RennSDK.h>
+//#import "Renn
+#import "RennSDK/RennSDK.h"
 
-@interface MasterViewController () {
+
+@interface MasterViewController () <RennLoginDelegate> {
     NSMutableArray *_objects;
     int pageNumber;
 }
@@ -52,8 +56,12 @@
     
     pageNumber = 1;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Load more" style:UIBarButtonItemStylePlain target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *loginButton = [[UIBarButtonItem alloc] initWithTitle:@"Log in" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
+    self.navigationItem.leftBarButtonItem = loginButton;
     
     NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=%@&feedType=UPDATE_STATUS&pageSize=100", TOKEN];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -96,6 +104,16 @@
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 //    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
+
+- (void)login {
+    [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
+    [[RennLoginService sharedRennLoginService] login];
+}
+
+- (void)rennLoginSuccess {
+
+}
+
 
 #pragma mark - Table View
 
