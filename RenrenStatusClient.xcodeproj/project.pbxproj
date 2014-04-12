@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182786E518F93C870058ABEB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 182786E318F93C870058ABEB /* RennSDK.bundle */; };
+		182786E618F93C870058ABEB /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182786E418F93C870058ABEB /* RennSDK.framework */; };
 		1836F50418897FFB00B1E077 /* PostStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836F50318897FFB00B1E077 /* PostStatusViewController.m */; };
 		1836F5B718A448DA0022A83D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1836F59918A448DA0022A83D /* LICENSE */; };
 		1836F5B818A448DA0022A83D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1836F59A18A448DA0022A83D /* README.md */; };
@@ -58,8 +60,6 @@
 		188EE0E2187EAC3D009CFEF1 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D7187EAC3D009CFEF1 /* AFURLRequestSerialization.m */; };
 		188EE0E3187EAC3D009CFEF1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */; };
 		188EE0E4187EAC3D009CFEF1 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */; };
-		18F4E09818EB12E900FA30DA /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18F4E09618EB12E900FA30DA /* RennSDK.bundle */; };
-		18F4E09918EB12E900FA30DA /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F4E09718EB12E900FA30DA /* RennSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +74,8 @@
 
 /* Begin PBXFileReference section */
 		1808002718A455D600FD15B3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		182786E318F93C870058ABEB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RennSDK.bundle; path = "../../../../Downloads/renren-api2-sdk-ios-0.9.3 2/RennSDK.bundle"; sourceTree = "<group>"; };
+		182786E418F93C870058ABEB /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RennSDK.framework; path = "../../../../Downloads/renren-api2-sdk-ios-0.9.3 2/RennSDK.framework"; sourceTree = "<group>"; };
 		1836F50218897FFB00B1E077 /* PostStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostStatusViewController.h; sourceTree = "<group>"; };
 		1836F50318897FFB00B1E077 /* PostStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostStatusViewController.m; sourceTree = "<group>"; };
 		1836F59918A448DA0022A83D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -147,8 +149,6 @@
 		188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		188EE0DA187EAC3D009CFEF1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		18F4E09618EB12E900FA30DA /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RennSDK.bundle; sourceTree = "<group>"; };
-		18F4E09718EB12E900FA30DA /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			files = (
 				188EE076187E33C7009CFEF1 /* CoreGraphics.framework in Frameworks */,
 				188EE078187E33C7009CFEF1 /* UIKit.framework in Frameworks */,
-				18F4E09918EB12E900FA30DA /* RennSDK.framework in Frameworks */,
+				182786E618F93C870058ABEB /* RennSDK.framework in Frameworks */,
 				188EE074187E33C7009CFEF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +179,6 @@
 		1821A0DB18A3072E00F380A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				18F4E09518EB12D100FA30DA /* Renren */,
 				1836F59818A448DA0022A83D /* TSMessages */,
 				188EE0C8187EAC3D009CFEF1 /* AFNetworking */,
 			);
@@ -312,6 +311,8 @@
 		188EE079187E33C7009CFEF1 /* RenrenStatusClient */ = {
 			isa = PBXGroup;
 			children = (
+				182786E318F93C870058ABEB /* RennSDK.bundle */,
+				182786E418F93C870058ABEB /* RennSDK.framework */,
 				1821A0DB18A3072E00F380A0 /* Vendor */,
 				188EE082187E33C7009CFEF1 /* AppDelegate.h */,
 				188EE083187E33C7009CFEF1 /* AppDelegate.m */,
@@ -385,15 +386,6 @@
 			);
 			name = AFNetworking;
 			path = RenrenStatusClient/AFNetworking;
-			sourceTree = "<group>";
-		};
-		18F4E09518EB12D100FA30DA /* Renren */ = {
-			isa = PBXGroup;
-			children = (
-				18F4E09618EB12E900FA30DA /* RennSDK.bundle */,
-				18F4E09718EB12E900FA30DA /* RennSDK.framework */,
-			);
-			name = Renren;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,7 +492,7 @@
 				1836F5C618A448DA0022A83D /* NotificationBackgroundWarningIcon.png in Resources */,
 				1836F5C118A448DA0022A83D /* NotificationBackgroundSuccess@2x.png in Resources */,
 				1836F5BB18A448DA0022A83D /* NotificationBackgroundError@2x.png in Resources */,
-				18F4E09818EB12E900FA30DA /* RennSDK.bundle in Resources */,
+				182786E518F93C870058ABEB /* RennSDK.bundle in Resources */,
 				1836F5BE18A448DA0022A83D /* NotificationBackgroundMessage.png in Resources */,
 				188EE087187E33C7009CFEF1 /* Main.storyboard in Resources */,
 				1836F5C718A448DA0022A83D /* NotificationBackgroundWarningIcon@2x.png in Resources */,
@@ -672,6 +664,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/apple/Downloads/renren-api2-sdk-ios-0.9.3",
+					2,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";
@@ -690,6 +684,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/apple/Downloads/renren-api2-sdk-ios-0.9.3",
+					2,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";

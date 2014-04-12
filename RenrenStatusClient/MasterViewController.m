@@ -11,8 +11,8 @@
 #import "Constants.h"
 #import "DetailViewController.h"
 //#import <RennSDK/RennSDK.h>
-//#import "Renn
 #import "RennSDK/RennSDK.h"
+#import "TSMessage.h"
 
 
 @interface MasterViewController () <RennLoginDelegate> {
@@ -48,6 +48,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+//    [TSMessage showNotificationWithTitle:@"This is just for fun, so it's Buggy~ Enjoy!" subtitle:nil type:TSMessageNotificationTypeMessage]; canBeDismisedByUser:<#(BOOL)#>];
+    [TSMessage showNotificationInViewController:self title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" subtitle:nil type:TSMessageNotificationTypeSuccess];
+    
     self.title = @"RenRen";
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     self.refreshControl = refreshControl;
@@ -106,6 +110,7 @@
 }
 
 - (void)login {
+    [RennAccessToken
     [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
     [[RennLoginService sharedRennLoginService] login];
 }
