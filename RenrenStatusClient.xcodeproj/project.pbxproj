@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A8CE218FC1DF800975F6D /* renren_avatar _500.png in Resources */ = {isa = PBXBuildFile; fileRef = 180A8CDF18FC1DF800975F6D /* renren_avatar _500.png */; };
+		180A8CE318FC1DF800975F6D /* renren_avatar 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 180A8CE018FC1DF800975F6D /* renren_avatar 2.png */; };
+		180A8CE418FC1DF800975F6D /* renren_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 180A8CE118FC1DF800975F6D /* renren_avatar.png */; };
 		182786E518F93C870058ABEB /* RennSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 182786E318F93C870058ABEB /* RennSDK.bundle */; };
 		182786E618F93C870058ABEB /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182786E418F93C870058ABEB /* RennSDK.framework */; };
 		1836F50418897FFB00B1E077 /* PostStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836F50318897FFB00B1E077 /* PostStatusViewController.m */; };
@@ -74,6 +77,9 @@
 
 /* Begin PBXFileReference section */
 		1808002718A455D600FD15B3 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		180A8CDF18FC1DF800975F6D /* renren_avatar _500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "renren_avatar _500.png"; sourceTree = "<group>"; };
+		180A8CE018FC1DF800975F6D /* renren_avatar 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "renren_avatar 2.png"; sourceTree = "<group>"; };
+		180A8CE118FC1DF800975F6D /* renren_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renren_avatar.png; sourceTree = "<group>"; };
 		182786E318F93C870058ABEB /* RennSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RennSDK.bundle; path = "../../../../Downloads/renren-api2-sdk-ios-0.9.3 2/RennSDK.bundle"; sourceTree = "<group>"; };
 		182786E418F93C870058ABEB /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RennSDK.framework; path = "../../../../Downloads/renren-api2-sdk-ios-0.9.3 2/RennSDK.framework"; sourceTree = "<group>"; };
 		1836F50218897FFB00B1E077 /* PostStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostStatusViewController.h; sourceTree = "<group>"; };
@@ -335,6 +341,9 @@
 		188EE07A187E33C7009CFEF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				180A8CDF18FC1DF800975F6D /* renren_avatar _500.png */,
+				180A8CE018FC1DF800975F6D /* renren_avatar 2.png */,
+				180A8CE118FC1DF800975F6D /* renren_avatar.png */,
 				188EE07B187E33C7009CFEF1 /* RenrenStatusClient-Info.plist */,
 				188EE07C187E33C7009CFEF1 /* InfoPlist.strings */,
 				188EE07F187E33C7009CFEF1 /* main.m */,
@@ -476,6 +485,7 @@
 				1836F5BD18A448DA0022A83D /* NotificationBackgroundErrorIcon@2x.png in Resources */,
 				1836F5C518A448DA0022A83D /* NotificationBackgroundWarning@2x.png in Resources */,
 				1836F5BC18A448DA0022A83D /* NotificationBackgroundErrorIcon.png in Resources */,
+				180A8CE418FC1DF800975F6D /* renren_avatar.png in Resources */,
 				1836F5C418A448DA0022A83D /* NotificationBackgroundWarning.png in Resources */,
 				1836F5C918A448DA0022A83D /* NotificationButtonBackground@2x.png in Resources */,
 				1836F5D518A4492B0022A83D /* README.md in Resources */,
@@ -494,7 +504,9 @@
 				1836F5BB18A448DA0022A83D /* NotificationBackgroundError@2x.png in Resources */,
 				182786E518F93C870058ABEB /* RennSDK.bundle in Resources */,
 				1836F5BE18A448DA0022A83D /* NotificationBackgroundMessage.png in Resources */,
+				180A8CE318FC1DF800975F6D /* renren_avatar 2.png in Resources */,
 				188EE087187E33C7009CFEF1 /* Main.storyboard in Resources */,
+				180A8CE218FC1DF800975F6D /* renren_avatar _500.png in Resources */,
 				1836F5C718A448DA0022A83D /* NotificationBackgroundWarningIcon@2x.png in Resources */,
 				1836F5C318A448DA0022A83D /* NotificationBackgroundSuccessIcon@2x.png in Resources */,
 			);
