@@ -10,7 +10,7 @@
 #define RenrenStatusClient_Constants_h
 
 #define USER_STATUS_KEY @"user_status_key"
-#define TOKEN @"195797|6.03c84f9c7167d1c210c7ca52337b1d33.2592000.1397318400-279838227"
+#define TOKEN @"195797|6.7b133b7b564b487c9e3265615e196951.2592000.1401361200-279838227"
 #define STATUS_ARRAY @"status_array_key"
 
 #endif

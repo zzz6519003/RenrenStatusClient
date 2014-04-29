@@ -10,8 +10,9 @@
 #import "AFNetworking.h"
 #import "Constants.h"
 #import "TSMessage.h"
+#import "AMWaveTransition.h"
 
-@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *replyContent;
 
 - (void)configureView;
@@ -51,6 +52,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.navigationController setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -151,6 +157,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
+}
+
+
+- (NSArray*)visibleCells
+{
+    return [self.comm visibleCells];
 }
 
 

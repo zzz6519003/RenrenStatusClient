@@ -11,11 +11,12 @@
 #import "Constants.h"
 #import "DetailViewController.h"
 //#import <RennSDK/RennSDK.h>
-#import "RennSDK/RennSDK.h"
+//#import "RennSDK/RennSDK.h"
 #import "TSMessage.h"
+#import "AMWaveTransition.h"
 
 
-@interface MasterViewController () <RennLoginDelegate> {
+@interface MasterViewController ()  {
     NSMutableArray *_objects;
     int pageNumber;
 }
@@ -81,6 +82,10 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.navigationController setDelegate:self];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -110,9 +115,9 @@
 }
 
 - (void)login {
-    [RennAccessToken
-    [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
-    [[RennLoginService sharedRennLoginService] login];
+//    [RennAccessToken
+//    [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
+//    [[RennLoginService sharedRennLoginService] login];
 }
 
 - (void)rennLoginSuccess {
@@ -205,5 +210,22 @@
         [[segue destinationViewController] setDetailItem:object];
     }
 }
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController*)fromVC
+                                                 toViewController:(UIViewController*)toVC
+{
+    if (operation != UINavigationControllerOperationNone) {
+        return [AMWaveTransition transitionWithOperation:operation];
+    }
+    return nil;
+}
+
+- (NSArray*)visibleCells
+{
+    return [self.tableView visibleCells];
+}
+
 
 @end
