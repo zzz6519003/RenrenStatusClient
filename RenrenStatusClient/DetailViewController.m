@@ -12,7 +12,7 @@
 #import "TSMessage.h"
 #import "AMWaveTransition.h"
 
-@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
+@interface DetailViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *replyContent;
 @property (weak, nonatomic) IBOutlet UITableView *commentsTableview;
 @property (strong, nonatomic) NSArray *fakeContent;
@@ -50,6 +50,8 @@
 {
     [super viewDidLoad];
     self.fakeContent = @[@"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith"];
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
