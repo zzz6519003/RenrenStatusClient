@@ -14,6 +14,8 @@
 
 @interface DetailViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *replyContent;
+@property (weak, nonatomic) IBOutlet UITableView *commentsTableview;
+@property (strong, nonatomic) NSArray *fakeContent;
 
 - (void)configureView;
 
@@ -47,6 +49,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.fakeContent = @[@"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith"];
+
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
@@ -135,22 +139,27 @@
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
+    return self.fakeContent.count;
     if (![self.commentsArray isKindOfClass:[NSNull class]]) {
-    return [self.commentsArray count];
+        return [self.commentsArray count];
     }
     else {
         return 0;
     }
-}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"commentCell"];
-    cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
-    cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
+//    cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
+    cell.detailTextLabel.text = self.fakeContent[indexPath.row];
+//    cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
     cell.detailTextLabel.numberOfLines = 0;
     return cell;
 }
@@ -159,10 +168,27 @@
     return 60;
 }
 
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController*)fromVC
+                                                 toViewController:(UIViewController*)toVC
+{
+    if (operation != UINavigationControllerOperationNone) {
+        return [AMWaveTransition transitionWithOperation:operation];
+    }
+    return nil;
+}
+
+
 
 - (NSArray*)visibleCells
 {
-    return [self.comm visibleCells];
+    return [self.commentsTableview visibleCells];
+}
+
+- (void)dealloc
+{
+    [self.navigationController setDelegate:nil];
 }
 
 

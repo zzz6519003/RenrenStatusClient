@@ -227,5 +227,9 @@
     return [self.tableView visibleCells];
 }
 
+- (void)dealloc
+{
+    [self.navigationController setDelegate:nil];
+}
 
 @end
