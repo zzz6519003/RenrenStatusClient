@@ -141,13 +141,16 @@
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
     
     
-    return self.fakeContent.count;
+//    return self.fakeContent.count;
     if (![self.commentsArray isKindOfClass:[NSNull class]]) {
         return [self.commentsArray count];
     }
@@ -158,15 +161,25 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell.textLabel.text = self.detailItem[@"resource"][@"content"];
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:12];
+        return cell;
+    }
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:@"commentCell"];
-//    cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
-    cell.detailTextLabel.text = self.fakeContent[indexPath.row];
-//    cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
+    cell.detailTextLabel.text = self.commentsArray[indexPath.row][@"content"];
+//    cell.detailTextLabel.text = self.fakeContent[indexPath.row];
+    cell.textLabel.text = self.commentsArray[indexPath.row][@"author"][@"name"];
     cell.detailTextLabel.numberOfLines = 0;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 150;
+    }
     return 60;
 }
 
