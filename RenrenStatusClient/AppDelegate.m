@@ -14,6 +14,7 @@
 {
     // Override point for customization after application launch.
 //    [[UILabel appearance] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:1.0]];
+    
     return YES;
 }
 							
