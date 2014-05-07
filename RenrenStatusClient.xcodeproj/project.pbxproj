@@ -63,7 +63,6 @@
 		188EE0E2187EAC3D009CFEF1 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D7187EAC3D009CFEF1 /* AFURLRequestSerialization.m */; };
 		188EE0E3187EAC3D009CFEF1 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */; };
 		188EE0E4187EAC3D009CFEF1 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */; };
-		F15F431619137F71003C45E0 /* RennSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15F431519137F71003C45E0 /* RennSDK.framework */; };
 		F1FEB1AC191379970099C8DC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F1FEB1AB191379970099C8DC /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -159,7 +158,6 @@
 		188EE0D9187EAC3D009CFEF1 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		188EE0DA187EAC3D009CFEF1 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		188EE0DB187EAC3D009CFEF1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		F15F431519137F71003C45E0 /* RennSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RennSDK.framework; sourceTree = "<group>"; };
 		F1FEB1AB191379970099C8DC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +168,6 @@
 			files = (
 				188EE076187E33C7009CFEF1 /* CoreGraphics.framework in Frameworks */,
 				188EE078187E33C7009CFEF1 /* UIKit.framework in Frameworks */,
-				F15F431619137F71003C45E0 /* RennSDK.framework in Frameworks */,
 				188EE074187E33C7009CFEF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +188,6 @@
 		1821A0DB18A3072E00F380A0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				F15F431519137F71003C45E0 /* RennSDK.framework */,
 				185C038A190FB57900067D24 /* AMWaveTransition */,
 				1836F59818A448DA0022A83D /* TSMessages */,
 				188EE0C8187EAC3D009CFEF1 /* AFNetworking */,
@@ -696,8 +692,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/apple/Downloads/renren-api2-sdk-ios-0.9.3",
-					2,
+					/Users/apple/Develop/iOS,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";
@@ -716,8 +711,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"/Users/apple/Downloads/renren-api2-sdk-ios-0.9.3",
-					2,
+					/Users/apple/Develop/iOS,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RenrenStatusClient/RenrenStatusClient-Prefix.pch";
