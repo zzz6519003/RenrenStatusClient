@@ -10,10 +10,9 @@
 #import "AFNetworking.h"
 #import "Constants.h"
 #import "DetailViewController.h"
-//#import <RennSDK/RennSDK.h>
-//#import "RennSDK/RennSDK.h"
 #import "TSMessage.h"
 #import "AMWaveTransition.h"
+#import "LoginViewController.h"
 
 
 @interface MasterViewController () {
@@ -115,6 +114,9 @@
 }
 
 - (void)login {
+    LoginViewController *lvc = [[LoginViewController alloc] init];
+    [self presentViewController:lvc animated:YES completion:nil];
+//    afnet
 //    [RennAccessToken
 //    [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
 //    [RennClient setScope:@"read_user_feed read_user_blog read_user_photo read_user_status read_user_album read_user_comment read_user_share publish_blog publish_share send_notification photo_upload status_update create_album publish_comment publish_feed operate_like"];
