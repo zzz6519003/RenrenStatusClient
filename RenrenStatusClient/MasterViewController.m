@@ -50,7 +50,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
 //    [TSMessage showNotificationWithTitle:@"This is just for fun, so it's Buggy~ Enjoy!" subtitle:nil type:TSMessageNotificationTypeMessage]; canBeDismisedByUser:<#(BOOL)#>];
-    [TSMessage showNotificationInViewController:self title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" subtitle:nil type:TSMessageNotificationTypeSuccess];
+//    UIAlertView *al = [[UIAlertView alloc] initWithTitle:nil message:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//    [al show];
+    [TSMessage showNotificationInViewController:self.navigationController title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" subtitle:nil type:TSMessageNotificationTypeSuccess];
     
     self.title = @"RenRen";
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -113,9 +115,18 @@
 //    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+- (void)dismiss {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)login {
     LoginViewController *lvc = [[LoginViewController alloc] init];
-    [self presentViewController:lvc animated:YES completion:nil];
+    UINavigationController *uin = [[UINavigationController alloc] initWithRootViewController:lvc];
+
+    UIBarButtonItem *bn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(dismiss)];
+    [lvc.navigationItem setLeftBarButtonItem:bn animated:YES];
+
+    [self presentViewController:uin animated:YES completion:nil];
 //    afnet
 //    [RennAccessToken
 //    [RennClient initWithAppId:@"246550" apiKey:@"8efd8d438db6430ba01aadfd0d1eab3e" secretKey:@"01ba93ef63bb4769a09649b6ab1cbcd8"];
