@@ -41,6 +41,7 @@
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
+        [self.refreshControl endRefreshing];
     }];
 }
 
@@ -52,7 +53,7 @@
 //    [TSMessage showNotificationWithTitle:@"This is just for fun, so it's Buggy~ Enjoy!" subtitle:nil type:TSMessageNotificationTypeMessage]; canBeDismisedByUser:<#(BOOL)#>];
 //    UIAlertView *al = [[UIAlertView alloc] initWithTitle:nil message:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
 //    [al show];
-    [TSMessage showNotificationInViewController:self.navigationController title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" subtitle:nil type:TSMessageNotificationTypeSuccess];
+    [TSMessage showNotificationInViewController:self.navigationController title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!我的人人网是:赵正中 .m" subtitle:nil type:TSMessageNotificationTypeSuccess];
     
     self.title = @"RenRen";
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];

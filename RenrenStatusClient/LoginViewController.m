@@ -38,6 +38,11 @@
 //    webView.paginationMode = UIWebPaginationModeBottomToTop;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"如果你用的是iphone4，4s~那你要小心点不要点错位置了 难度系数13.2b" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [av show];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 //    UIScrollView *sv = [UIScrollView alloc] initWith
     
@@ -51,6 +56,8 @@
             str = [str stringByRemovingPercentEncoding];
             [[NSUserDefaults standardUserDefaults] setObject:str forKey:TOKEN_KEY];
             [[NSUserDefaults standardUserDefaults] synchronize];
+            UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"少年！可以回去下拉刷新了！如果出问题的话或者想贡献代码都欢迎找我～人人网联系" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [av show];
 
         }
     }
