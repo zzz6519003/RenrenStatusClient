@@ -82,6 +82,13 @@
         NSLog(@"Error: %@", error);
     }];
     
+//    [self.navigationController.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+//    [self.view setBackgroundColor:[UIColor clearColor]];
+//    [self.tableView setBackgroundColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -159,6 +166,9 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
+    [cell setBackgroundColor:[UIColor clearColor]];
+	[cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeContactAdd];
     btn.tag = indexPath.row;
     [btn addTarget:self action:@selector(like:) forControlEvents:UIControlEventTouchUpInside];

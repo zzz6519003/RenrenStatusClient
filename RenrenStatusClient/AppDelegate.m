@@ -15,6 +15,11 @@
 {
     // Override point for customization after application launch.
 //    [[UILabel appearance] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:1.0]];
+    NSDictionary *attributes = @{ NSFontAttributeName: [UIFont fontWithName:@"GillSans-Light" size:20],
+								  };
+	[[UINavigationBar appearance] setTitleTextAttributes:attributes];
+//	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
     
     return YES;
 }

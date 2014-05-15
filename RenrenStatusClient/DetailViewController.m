@@ -49,9 +49,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    [self.commentsTableview setBackgroundColor:[UIColor clearColor]];
+//    [self.view setBackgroundColor:[UIColor clearColor]];
+
     self.fakeContent = @[@"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith", @"asdfadsfadsfasdfdsafadsfJudith"];
     
-    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+//    self.navigationController.interactivePopGestureRecognizer.delegate = self;
 
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
