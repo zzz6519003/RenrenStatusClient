@@ -101,7 +101,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (void)loadMore:(id)sender
 {
     pageNumber++;
     NSString *url = [NSString stringWithFormat:@"https://api.renren.com/v2/feed/list?access_token=%@&feedType=UPDATE_STATUS&pageSize=100&pageNumber=%d", TOKEN, pageNumber];
