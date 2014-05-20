@@ -54,6 +54,7 @@
 //    UIAlertView *al = [[UIAlertView alloc] initWithTitle:nil message:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
 //    [al show];
     [TSMessage showNotificationInViewController:self.navigationController title:@"This is just for fun, so it's Buggy~ Enjoy! 享受Bug吧!我的人人网是:赵正中 .m" subtitle:nil type:TSMessageNotificationTypeSuccess];
+    [TSMessage showNotificationInViewController:self.navigationController title:@"话说我还不确定是否要在人人那审核一次，如果你们登录后还刷新不出内容就在人人上跟我说吧~" subtitle:nil type:TSMessageNotificationTypeSuccess];
     
     self.title = @"RenRen";
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
