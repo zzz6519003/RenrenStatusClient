@@ -12,6 +12,7 @@
 		180A8CE418FC1DF800975F6D /* renren_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 180A8CE118FC1DF800975F6D /* renren_avatar.png */; };
 		180BACFC191F298200FFFBEF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BACFA191F298200FFFBEF /* LoginViewController.m */; };
 		180BACFD191F298200FFFBEF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BACFB191F298200FFFBEF /* LoginViewController.xib */; };
+		182A166219323F9400003BA1 /* TodoListCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A166119323F9400003BA1 /* TodoListCenter.m */; };
 		1836F50418897FFB00B1E077 /* PostStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836F50318897FFB00B1E077 /* PostStatusViewController.m */; };
 		1836F5B718A448DA0022A83D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1836F59918A448DA0022A83D /* LICENSE */; };
 		1836F5B818A448DA0022A83D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1836F59A18A448DA0022A83D /* README.md */; };
@@ -86,6 +87,8 @@
 		180BACF9191F298200FFFBEF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		180BACFA191F298200FFFBEF /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		180BACFB191F298200FFFBEF /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		182A166019323F9400003BA1 /* TodoListCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListCenter.h; sourceTree = "<group>"; };
+		182A166119323F9400003BA1 /* TodoListCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListCenter.m; sourceTree = "<group>"; };
 		1836F50218897FFB00B1E077 /* PostStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostStatusViewController.h; sourceTree = "<group>"; };
 		1836F50318897FFB00B1E077 /* PostStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostStatusViewController.m; sourceTree = "<group>"; };
 		1836F59918A448DA0022A83D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 				1837850B18B35A6B0015F2C5 /* StatusListViewController.h */,
 				1837850C18B35A6B0015F2C5 /* StatusListViewController.m */,
 				1808002718A455D600FD15B3 /* Constants.h */,
+				182A166019323F9400003BA1 /* TodoListCenter.h */,
+				182A166119323F9400003BA1 /* TodoListCenter.m */,
 				188EE08E187E33C7009CFEF1 /* Images.xcassets */,
 				188EE07A187E33C7009CFEF1 /* Supporting Files */,
 				F1FEB1AB191379970099C8DC /* README.md */,
@@ -572,6 +577,7 @@
 				1836F5CC18A448DA0022A83D /* TSMessageView.m in Sources */,
 				180BACFC191F298200FFFBEF /* LoginViewController.m in Sources */,
 				1836F5D318A4492B0022A83D /* HexColor.m in Sources */,
+				182A166219323F9400003BA1 /* TodoListCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
