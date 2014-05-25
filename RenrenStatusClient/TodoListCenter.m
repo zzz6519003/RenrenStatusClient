@@ -10,7 +10,6 @@
 
 @interface TodoListCenter ()
 
-@property (nonatomic, strong) NSMutableArray *statusArray;
 
 @end
 

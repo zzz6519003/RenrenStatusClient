@@ -18,4 +18,7 @@
 
 - (void)removeStatusAtPos:(NSInteger)pos;
 
+@property (nonatomic, strong) NSMutableArray *statusArray;
+
+
 @end
