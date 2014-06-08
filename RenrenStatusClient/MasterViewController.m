@@ -65,7 +65,7 @@
     pageNumber = 1;
 
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Load more" style:UIBarButtonItemStylePlain target:self action:@selector(insertNewObject:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"Load more" style:UIBarButtonItemStylePlain target:self action:@selector(loadMore:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     UIBarButtonItem *loginButton = [[UIBarButtonItem alloc] initWithTitle:@"Log in" style:UIBarButtonItemStylePlain target:self action:@selector(login)];
